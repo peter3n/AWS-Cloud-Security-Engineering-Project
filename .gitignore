@@ -1,0 +1,3 @@
+modules/01-cloud-foundation/evidence/hardened/terraform-hardened-scan.txt
+modules/01-cloud-foundation/evidence/hardened/hardened-plan.txt
+modules/01-cloud-foundation/evidence/hardened/hardened-plan-change-review.md

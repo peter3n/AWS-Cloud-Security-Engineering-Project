@@ -1,0 +1,18 @@
+FAIL. 14 finding(s):
+
+  [HIGH  ] sg          sg-079ba278bbfd2cabf   Ingress on port 443 open to 0.0.0.0/0.
+  [HIGH  ] iam         hwz-lab-workload       Role policy allows wildcard or service-wide actions (s3:*, kms:*).
+  [MEDIUM] s3          hwz-lab-cloudtrail-efe5a061 No TLS-only bucket policy. Plaintext requests accepted.
+  [MEDIUM] s3          hwz-lab-data-aa903160  No TLS-only bucket policy. Plaintext requests accepted.
+  [MEDIUM] vpc         vpc-038027023e6089268  No VPC flow logs. You cannot investigate traffic you never recorded.
+  [MEDIUM] iam         hwz-lab-flowlogs       No explicit deny on destructive actions (delete bucket, stop trail, delete key).
+  [MEDIUM] iam         hwz-lab-workload       No explicit deny on destructive actions (delete bucket, stop trail, delete key).
+  [MEDIUM] kms         a5c416d6-aaa7-47aa-b054-71846790dd33 Key rotation disabled.
+  [MEDIUM] cloudtrail  hwz-lab-trail          Trail is single-region. Activity in other regions is invisible.
+  [MEDIUM] cloudtrail  hwz-lab-trail          Log file validation off. Log tampering is undetectable.
+  [MEDIUM] cloudtrail  hwz-lab-trail          No S3 data events. Object reads and writes are not recorded.
+  [LOW   ] s3          hwz-lab-cloudtrail-efe5a061 Versioning off. No recovery from overwrite or delete.
+  [LOW   ] s3          hwz-lab-data-aa903160  Versioning off. No recovery from overwrite or delete.
+  [LOW   ] cloudtrail  hwz-lab-trail          Trail logs not encrypted with a customer-managed key.
+
+2 HIGH severity. Fix these first. Then re-run this scanner.

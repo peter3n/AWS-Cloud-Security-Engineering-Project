@@ -1,0 +1,2 @@
+# Hardened S3 Review
+Overwritten and intentionally or accidentally deleted data in the S3 data and CloudTrail buckets can now be recovered because bucket versioning is enabled. The TLS-only bucket policy denies unencrypted HTTP traffic, protecting all S3 data for both buckets during transit. SSE-KMS encryption is the new default encryption for the data bucket, adding key-access controls and KMS key-usage auditing for S3 data.
